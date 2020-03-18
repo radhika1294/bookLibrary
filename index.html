@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Book Library</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script scr="C:\Users\Agamkhullar!\Desktop\BookLibraryProject\index.js"></script>  
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+  <body>
+    <div class="jumbotron jumbotron-fluid" style="background-color:lightseagreen">
+        <div class="container text-center">
+            <h3>Book Library System</h3>
+            <img src="images\Logo.jpg" class="rounded-circle" alt="Bird" width="20%" height="20%">
+        </div><br>
+        <div class="container">
+            <form action="" id="addBooks" method="POST">
+                <!--book Name-->
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Book Name</span>
+                </div>
+                <input  name="bname" id="bname" placeholder="--Book Name--" class="form-control"  type="text">
+                </div>
+                <!--Description-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Description</span>
+                    </div>
+                    <textarea name="description" id="description" placeholder="--Description--" class="form-control"  type="text"></textarea>                            
+                </div>
+                <!--Author Name-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Author</span>
+                    </div>
+                    <input  name="author" id="author" placeholder="--Author Name--" class="form-control"  type="text">                
+                </div>
+                <!--Category-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Category</span>
+                    </div>
+                    <input  name="Category" id="category" placeholder="--category--" class="form-control"  type="text">                
+                </div>
+                <!--Price-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Price</span>
+                    </div>
+                    <input  name="price" id="price" placeholder="--Price--" class="form-control"  type="text">                
+                </div>
+                <!--Count-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Count</span>
+                    </div>
+                    <input  name="booksCount" id="booksCount" placeholder="--Number of copies--" class="form-control"  type="text">                
+                </div>
+                <!--Publication-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Publication</span>
+                    </div>
+                    <input  name="publication" id="publication" placeholder="--Publication--" class="form-control"  type="text">                
+                </div>
+                <!--Language-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Language</span>
+                    </div>
+                    <input  name="language" id="language" placeholder="--Language--" class="form-control"  type="text">                
+                </div>
+                <!--Edition-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">Edition</span>
+                    </div>
+                    <input  name="edition" id="edition" placeholder="--Edition--" class="form-control"  type="text">                
+                </div>
+                <button type="button" class="btn btn-primary" onclick="onSubmit();">Submit</button>
+                <span onclick="showRecords();">Click Here To View Available books</span>
+            </form><br>            
+            <div class="table-responsive" id="availableBooksRecord" style="display: none;">
+                <input type="text" id="myInput" onkeyup="fetchBookByName()" placeholder="---Search book by names---" title="Type in a name"><br><br>
+                <table id="myTableData" border="5px" class="table table-bordered" cellpadding="2"></table>
+                <span onclick="showForm();">Click Here To Add New Records</span>
+            </div>
+            
+        </div>
+    </div> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+</body>
+</html>
